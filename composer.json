@@ -4,7 +4,9 @@
   "type": "libary",
   "require": {
     "akeneo/pim-community-dev": "^2.3",
-    "tightenco/collect": "^5.7"
+    "tightenco/collect": "^5.7",
+    "dragonmantank/cron-expression": "^2.2",
+    "cocur/background-process": "^0.7.0"
   },
   "license": "MIT",
   "authors": [

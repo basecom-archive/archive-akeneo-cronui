@@ -47,4 +47,12 @@ abstract class JobCronjobAction extends CommandCronjobAction
             '--config' => json_encode($this->getJobParams()),
         ];
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLabel(): string
+    {
+        return $this->getJobName();
+    }
 }

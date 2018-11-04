@@ -3,6 +3,8 @@
 namespace Basecom\Bundle\CronUiBundle\Command;
 
 use Basecom\Bundle\CronUiBundle\Builder\CronjobBuilder;
+use Basecom\Bundle\CronUiBundle\CronAction\CronAction;
+use Cron\CronExpression;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -44,8 +46,12 @@ class CronjobsRunCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
-        foreach($this->builder->getCronjobs() as $job) {
-            $output->writeln($job->getCronExpression());
-        }
+        collect($this->builder->getCronjobs())->filter(function(CronAction $job) {
+            return CronExpression::factory($job->getCronExpression())->isDue();
+        })->each(function (CronAction $job) use ($output) {
+            $output->writeln("Executing <comment>{$job->getLabel()}</comment>");
+        })->each(function (CronAction $job) {
+            $job->execute();
+        });
     }
 }

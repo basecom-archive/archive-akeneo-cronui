@@ -2,6 +2,7 @@
 
 namespace Basecom\Bundle\CronUiBundle\CronAction;
 
+use Cocur\BackgroundProcess\BackgroundProcess;
 use Symfony\Component\Process\Process;
 
 /**
@@ -63,9 +64,17 @@ abstract class CommandCronjobAction implements CronAction
             return $this->startBackgroundProcess($command);
         }
 
-        $process = new Process("{$this->basePath}/bin/console {$command}", null, null, null, null);
+        $process = new Process("{$this->basePath}/../bin/console {$command}", null, null, null, null);
 
         return $process->run() === 0;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLabel(): string
+    {
+        return $this->getCommand();
     }
 
     /**
@@ -77,10 +86,10 @@ abstract class CommandCronjobAction implements CronAction
      */
     private function startBackgroundProcess(string $command): bool
     {
-        $process = new Process("{$this->basePath}/bin/console {$command} &", null, null, null, null);
+        $process = new BackgroundProcess("{$this->basePath}/../bin/console {$command}");
 
         try {
-            $process->start();
+            $process->run();
 
             return true;
         } catch (\Exception $e) {
@@ -96,7 +105,7 @@ abstract class CommandCronjobAction implements CronAction
     private function convertParams(): string
     {
         $keyValue = collect($this->getCommandParams())->map(function ($value, $key) {
-            $escaped = escapeshellcmd($value);
+            $escaped = escapeshellarg($value);
 
             return "{$key}=${escaped}";
         })->toArray();

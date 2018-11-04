@@ -9,6 +9,24 @@ namespace Basecom\Bundle\CronUiBundle\CronAction;
  */
 interface CronAction
 {
+    /** @var string */
+    public const YEARLY = '@yearly';
+
+    /** @var string */
+    public const MONTHLY = '@monthly';
+
+    /** @var string */
+    public const WEEKLY = '@weekly';
+
+    /** @var string */
+    public const DAILY = '@daily';
+
+    /** @var string */
+    public const HOURLY = '@hourly';
+
+    /** @var string */
+    public const MINUTELY = '* * * * *';
+
     /**
      * Get the expression in cron format.
      * More information: http://www.nncron.ru/help/EN/working/cron-format.htm.
@@ -24,4 +42,11 @@ interface CronAction
      * @return bool
      */
     public function execute(): bool;
+
+    /**
+     * Get the label that is used on the front-end and console output.
+     *
+     * @return string
+     */
+    public function getLabel(): string;
 }
