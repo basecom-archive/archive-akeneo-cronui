@@ -3,7 +3,8 @@
   "description": "This bundle provides an UI for managing Cronjobs in Akeneo",
   "type": "libary",
   "require": {
-    "akeneo/pim-community-dev": "^2.3"
+    "akeneo/pim-community-dev": "^2.3",
+    "tightenco/collect": "^5.7"
   },
   "license": "MIT",
   "authors": [
@@ -15,7 +16,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Basecom\\CronUi\\": "src/Basecom/Bundle/"
+      "Basecom\\CronUi\\": "src/Basecom/Bundle/CronUiBundle/"
     }
   },
   "require-dev": {
