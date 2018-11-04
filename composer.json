@@ -6,7 +6,8 @@
     "akeneo/pim-community-dev": "^2.3",
     "tightenco/collect": "^5.7",
     "dragonmantank/cron-expression": "^2.2",
-    "cocur/background-process": "^0.7.0"
+    "cocur/background-process": "^0.7.0",
+    "akeneo-labs/custom-entity-bundle": "^2.4"
   },
   "license": "MIT",
   "authors": [
