@@ -10,7 +10,7 @@
   2.1 [Define cronjobs in code](#define-cronjobs-in-code)   
   2.2 [Define cronjobs in ui](#define-cronjobs-in-ui)
 3. [Examples](#examples)   
-  3.1 [Run an export job every hour](#run-an-export-job-every-hour)
+  3.1 [Run an export job every hour](#run-an-export-job-every-hour)   
   3.2 [Make an mysql backup and copy it via ssh](#make-an-mysql-backup-and-copy-it-via-ssh)
 4. [Authors](#authors)
 5. [License](#license)
