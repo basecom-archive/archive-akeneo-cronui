@@ -1,6 +1,6 @@
 <?php
 
-namespace Basecom\CronUi\CronAction;
+namespace Basecom\Bundle\CronUiBundle\CronAction;
 
 /**
  * This cronjob actions is able to execute any job. It dispatches it to the queue.

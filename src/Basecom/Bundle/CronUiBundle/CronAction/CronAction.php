@@ -1,6 +1,6 @@
 <?php
 
-namespace Basecom\CronUi\CronAction;
+namespace Basecom\Bundle\CronUiBundle\CronAction;
 
 /**
  * Basic interface for all cron actions.

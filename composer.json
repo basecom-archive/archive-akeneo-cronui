@@ -16,7 +16,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Basecom\\CronUi\\": "src/Basecom/Bundle/CronUiBundle/"
+      "Basecom\\Bundle\\CronUiBundle\\": "src/Basecom/Bundle/CronUiBundle/"
     }
   },
   "require-dev": {

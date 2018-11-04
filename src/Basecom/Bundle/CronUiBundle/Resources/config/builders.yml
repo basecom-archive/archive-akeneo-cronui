@@ -1,0 +1,6 @@
+parameters:
+  basecom.cron-ui.builder.cronjob.class: 'Basecom\Bundle\CronUiBundle\Builder\CronjobBuilder'
+
+services:
+  basecom.cron-ui.builder.cronjob:
+    class: '%basecom.cron-ui.builder.cronjob.class%'
