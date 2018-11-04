@@ -25,7 +25,7 @@ class CronActionPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container): void
     {
-        if (! $container->has(static::BUILDER_ID)) {
+        if (!$container->has(static::BUILDER_ID)) {
             return;
         }
 

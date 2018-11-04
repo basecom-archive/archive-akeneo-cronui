@@ -3,11 +3,11 @@
 namespace Basecom\Bundle\CronUiBundle\CronAction;
 
 /**
- * Basic interface for all cron actions.
+ * Basic interface for all cronjobs.
  *
  * @author Jordan Kniest <j.kniest@basecom.de>
  */
-interface CronAction
+interface Cronjob
 {
     /** @var string */
     public const YEARLY = '@yearly';

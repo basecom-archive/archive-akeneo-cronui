@@ -7,7 +7,7 @@ namespace Basecom\Bundle\CronUiBundle\CronAction;
  *
  * @author Jordan Kniest <j.kniest@basecom.de>
  */
-abstract class JobCronjobAction extends CommandCronjobAction
+abstract class JobCronjob extends CommandCronjob
 {
     /**
      * Get the name of the job, which should be executed.

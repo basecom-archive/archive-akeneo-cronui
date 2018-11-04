@@ -10,7 +10,7 @@ use Symfony\Component\Process\Process;
  *
  * @author Jordan Kniest <j.kniest@basecom.de>
  */
-abstract class CommandCronjobAction implements CronAction
+abstract class CommandCronjob implements Cronjob
 {
     /** @var string */
     private $basePath = '';

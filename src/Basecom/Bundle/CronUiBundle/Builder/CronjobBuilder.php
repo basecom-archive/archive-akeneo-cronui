@@ -2,7 +2,7 @@
 
 namespace Basecom\Bundle\CronUiBundle\Builder;
 
-use Basecom\Bundle\CronUiBundle\CronAction\CronAction;
+use Basecom\Bundle\CronUiBundle\CronAction\Cronjob;
 
 /**
  * This class builds all cronjobs based on service tags and the database entities.
@@ -11,15 +11,15 @@ use Basecom\Bundle\CronUiBundle\CronAction\CronAction;
  */
 class CronjobBuilder
 {
-    /** @var CronAction[] */
+    /** @var Cronjob[] */
     private $cronjobs = [];
 
     /**
      * Add a new cronjob to the internal cronjob list.
      *
-     * @param CronAction $action
+     * @param Cronjob $action
      */
-    public function addCronjob(CronAction $action): void
+    public function addCronjob(Cronjob $action): void
     {
         $this->cronjobs[] = $action;
     }
@@ -27,7 +27,7 @@ class CronjobBuilder
     /**
      * Get all cronjobs.
      *
-     * @return CronAction[]
+     * @return Cronjob[]
      */
     public function getCronjobs(): array
     {
