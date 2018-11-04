@@ -4,7 +4,7 @@
 
 ## Table of contents
 1. [Installation](#installation)   
-  1.1 [Requirements](#requirements)
+  1.1 [Requirements](#requirements)   
   1.2 [Install the bundle](#install-the-bundle)
 2. [Usage](#usage)   
   2.1 [Define cronjobs in code](#define-cronjobs-in-code)   
@@ -19,11 +19,41 @@
 
 ### Requirements
 
-> akeneo 2.3, php 7.1, etc.
+This bundle requires **[Akeneo 2.3 Community Edition](http://akeneo.com)** or higher. 
+Also it required **[PHP 7.1](http://php.net)** or higher.
 
 ### Install the bundle
 
-> detailed installation instructions
+1. Install this package via composer:
+```bash
+composer require basecom/akeneo-cron-ui
+```
+
+2. Follow the installation steps of the [Custom entity bundle](https://github.com/akeneo-labs/CustomEntityBundle) if not
+already installed.
+
+3. Add the bundle to the `AppKernel.php`:
+```php
+protected function registerProjectBundles()
+{
+	return [
+		new \Basecom\Bundle\CronUiBundle\BasecomCronUiBundle(),
+	];
+}
+```
+
+4. Add the `cronjobs:run` command to the crontab:
+```crontab
+* * * * * cd /path-to-your-project && php ./bin/console cronjobs:run >> /dev/null 2>&1
+```
+
+5. Clear all caches and regenerate front-end assets:
+```bash
+php ./bin/console cache:clear --env=prod --no-warmup
+php ./bin/console cache:warmup --env=prod
+php ./bin/console pim:installer:assets --symlink --clean --env=prod
+yarn run webpack
+```
 
 ## Usage
 
