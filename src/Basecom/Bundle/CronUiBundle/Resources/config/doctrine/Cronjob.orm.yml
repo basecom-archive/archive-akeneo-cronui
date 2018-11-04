@@ -1,0 +1,18 @@
+Basecom\Bundle\CronUiBundle\Entity\Cronjob:
+  type:                 'entity'
+  repositoryClass:      'Pim\Bundle\CustomEntityBundle\Entity\Repository\CustomEntityRepository'
+  table:                'basecom_cronjobs'
+  changeTrackingPolicy: 'DEFERRED_EXPLICIT'
+  fields:
+    id:
+      type: integer
+      id:   true
+      generator:
+        strategy: AUTO
+    command:
+      type: text
+    expression:
+      type: string
+      length: 100
+    backgroundTask:
+      type: boolean

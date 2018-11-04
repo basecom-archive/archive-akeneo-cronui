@@ -12,8 +12,9 @@
 3. [Examples](#examples)   
   3.1 [Run an export job every hour](#run-an-export-job-every-hour)   
   3.2 [Make an mysql backup and copy it via ssh](#make-an-mysql-backup-and-copy-it-via-ssh)
-4. [Authors](#authors)
-5. [License](#license)
+4. [Contributing](#contributing)
+5. [Authors](#authors)
+6. [License](#license)
 
 ## Installation
 
@@ -42,12 +43,19 @@ protected function registerProjectBundles()
 }
 ```
 
-4. Add the `cronjobs:run` command to the crontab:
+4. Run the doctrine schema update to create the new cronjobs table
+```bash
+php ./bin/console doctrine:schema:update --dump-sql --env=prod
+php ./bin/console doctrine:schema:update --force --env=prod
+
+```
+
+5. Add the `cronjobs:run` command to the crontab:
 ```crontab
 * * * * * cd /path-to-your-project && php ./bin/console cronjobs:run >> /dev/null 2>&1
 ```
 
-5. Clear all caches and regenerate front-end assets:
+6. Clear all caches and regenerate front-end assets:
 ```bash
 php ./bin/console cache:clear --env=prod --no-warmup
 php ./bin/console cache:warmup --env=prod
@@ -80,6 +88,10 @@ yarn run webpack
 
 > detailed code example how to make this   
 > also explanation
+
+## Contributing
+
+> feel free to submit an issue or pr... security related issue e-mail... 
 
 ## Authors
 
