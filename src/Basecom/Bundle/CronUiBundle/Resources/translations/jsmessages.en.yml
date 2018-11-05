@@ -1,0 +1,8 @@
+basecom:
+  cron-ui:
+    cronjobs: 'Cronjobs'
+    fields:
+      code:            'Code-'
+      command:         'Command-'
+      expression:      'Cron Expression-'
+      background-task: 'Run in background?-'

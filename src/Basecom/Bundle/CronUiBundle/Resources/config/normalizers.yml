@@ -1,0 +1,9 @@
+parameters:
+  basecom.cron-ui.normalizer.standard.cronjob.class: 'Basecom\Bundle\CronUiBundle\Normalizer\Standard\CronjobNormalizer'
+
+services:
+  basecom.cron-ui.normalizer.standard.cronjob:
+    class: '%basecom.cron-ui.normalizer.standard.cronjob.class%'
+    tags:
+    - { name: pim_serializer.normalizer, priority: 200 }
+    - { name: pim_versioning.serializer.normalizer, priority: 200 }

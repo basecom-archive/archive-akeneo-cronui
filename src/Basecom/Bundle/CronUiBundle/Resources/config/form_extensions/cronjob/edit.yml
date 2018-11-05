@@ -1,0 +1,140 @@
+extensions:
+  pim-cronjob-edit-form:
+    module:        'custom_entity/form/common/edit-form'
+    aclResourceId: 'basecom.cron-ui.edit.cronjob'
+
+  pim-cronjob-edit-form.breadcrumbs:
+    module:     'pim/common/breadcrumbs'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'breadcrumbs'
+    config:
+      tab:  'pim-menu-settings'
+      item: 'basecom.cron-ui.menu-item.cronjobs'
+
+  pim-cronjob-edit-form.cache-invalidator:
+    module:   'pim/cache-invalidator'
+    parent:   'pim-cronjob-edit-form'
+    position: 1000
+
+  pim-cronjob-edit-form.tabs:
+    module:     'pim/form/common/form-tabs'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'content'
+    position:   100
+
+  pim-cronjob-edit-form.label:
+    module:     'custom_entity/form/common/label'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'title'
+    position:   100
+
+  pim-cronjob-edit-form.secondary-actions:
+    module:     'pim/form/common/secondary-actions'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'buttons'
+    position:   50
+
+  pim-cronjob-edit-form.delete:
+    module:     'custom_entity/form/common/delete'
+    parent:     'pim-cronjob-edit-form.secondary-actions'
+    targetZone: 'secondary-actions'
+    position:   100
+    config:
+      route: 'pim_customentity_rest_delete'
+      routeParams:
+        customEntityName: 'cronjob'
+      trans:
+        title:     'Delete cronjob' # TODO: Translation file
+        container: 'pim_enrich.confirmation.delete_item'
+        success:   'pim_custom_entity.message.confirmation.removed'
+        fail:      'pim_custom_entity.error.removing'
+      redirect: 'pim_customentity_index'
+
+  pim-cronjob-edit-form.save-buttons:
+    module:     'pim/form/common/save-buttons'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'buttons'
+    position:   120
+
+  pim-cronjob-edit-form.state:
+    module:     'pim/form/common/state'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'state'
+    position:   900
+    config:
+      entity: 'pim_enrich.entity.group.title'
+
+  pim-cronjob-edit-form.save:
+    module:     'custom_entity/form/common/save-form'
+    parent:     'pim-cronjob-edit-form'
+    targetZone: 'buttons'
+    position:   0
+    config:
+      updateSuccessMessage: 'Update successful.' # TODO: Translation file
+      updateFailureMessage: 'Update failed.'  # TODO: Translation file
+      notReadyMessage:      'Not ready.' # TODO: Translation file
+      url:                  'pim_customentity_rest_edit'
+      route_params:
+        customEntityName: 'cronjob'
+      redirectAfter:        'pim_customentity_rest_get'
+      excludedProperties:   []
+
+  pim-cronjob-edit-form.properties-tab:
+    module:     'pim/common/tab'
+    parent:     'pim-cronjob-edit-form.tabs'
+    targetZone: 'container'
+    position:   100
+    config:
+      label: 'Properties' # TODO: Translation file
+
+  pim-cronjob-edit-form.properties:
+    module:     'pim/common/simple-view'
+    parent:     'pim-cronjob-edit-form.properties-tab'
+    targetZone: 'self'
+    config:
+      template: 'pim/template/form/tab/sections'
+
+  pim-cronjob-edit-form.history:
+    module:     'pim/common/tab/history'
+    parent:     'pim-cronjob-edit-form.tabs'
+    targetZone: 'container'
+    position:   110
+    config:
+      class: 'cronjob'
+      title: 'History' # TODO: Translation file
+
+  pim-cronjob-edit-form.properties-common:
+    module:     'pim/common/simple-view'
+    parent:     'pim-cronjob-edit-form.properties'
+    targetZone: 'accordion'
+    position:   100
+    config:
+      template: 'pim/template/form/tab/section'
+      templateParams:
+        sectionTitle: 'pim_custom_entity.form.tab.properties.section.common' # TODO: Custom translation file?
+        dropZone:     'content'
+
+  pim-cronjob-edit-form.properties-code:
+    module:     'pim/form/common/fields/text'
+    parent:     'pim-cronjob-edit-form.properties-common'
+    targetZone: 'content'
+    position:   90
+    config:
+      fieldName: 'code'
+      label:     'Code' # TODO: Trans file
+      required:  true
+      readOnly:  true
+
+  pim-cronjob-edit-form.properties-expression:
+    module:     'pim/form/common/fields/text'
+    parent:     'pim-cronjob-edit-form.properties-common'
+    targetZone: 'content'
+    position:   100
+    config:
+      fieldName: 'expression'
+      label:     'Expression' # TODO: Trans file
+      required:  true
+      readOnly:  false
+
+  # TODO: backgroundTask checkbox
+

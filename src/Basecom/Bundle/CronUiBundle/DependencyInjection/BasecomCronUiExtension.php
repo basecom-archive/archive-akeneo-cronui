@@ -22,7 +22,9 @@ class BasecomCronUiExtension extends Extension
     public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('entities.yml');
         $loader->load('builders.yml');
         $loader->load('commands.yml');
+        $loader->load('normalizers.yml');
     }
 }

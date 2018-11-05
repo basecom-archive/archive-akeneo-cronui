@@ -9,10 +9,14 @@ Basecom\Bundle\CronUiBundle\Entity\Cronjob:
       id:   true
       generator:
         strategy: AUTO
+    code:
+      type:   string
+      length: 100
+      unique: true
     command:
       type: text
     expression:
-      type: string
+      type:   string
       length: 100
     backgroundTask:
       type: boolean

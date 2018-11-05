@@ -3,13 +3,14 @@
 namespace Basecom\Bundle\CronUiBundle\Entity;
 
 use Pim\Bundle\CustomEntityBundle\Entity\AbstractCustomEntity;
+use Pim\Bundle\CustomEntityBundle\Versioning\VersionableInterface;
 
 /**
  * This entity is used for the dynamic cronjobs which are created through the user interface.
  *
  * @author Jordan Kniest <j.kniest@basecom.de>
  */
-class Cronjob extends AbstractCustomEntity
+class Cronjob extends AbstractCustomEntity implements VersionableInterface
 {
     /** @var string */
     protected $command;
@@ -78,6 +79,14 @@ class Cronjob extends AbstractCustomEntity
     public function setBackgroundTask(bool $backgroundTask): void
     {
         $this->backgroundTask = $backgroundTask;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getLabelProperty(): string
+    {
+        return 'code';
     }
 
     /**

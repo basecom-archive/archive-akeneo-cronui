@@ -1,0 +1,5 @@
+custom_entities:
+  cronjob:
+    entity_class: 'Basecom\Bundle\CronUiBundle\Entity\Cronjob'
+    options:
+      edit_form_extension: 'pim-cronjob-edit-form'

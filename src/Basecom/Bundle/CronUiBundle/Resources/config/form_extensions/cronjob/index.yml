@@ -1,0 +1,84 @@
+extensions:
+  pim-cronjob-index:
+    module: 'pim/common/simple-view'
+    config:
+      template: 'pim/template/common/default-template'
+    forwarded-events:
+      grid_load:start:    'grid_load:start'
+      grid_load:complete: 'grid_load:complete'
+
+  pim-cronjob-index.grid-container:
+    module:     'pim/common/simple-view'
+    parent:     'pim-cronjob-index'
+    targetZone: 'content'
+    config:
+      template: 'pim/template/form/index/index'
+
+  pim-cronjob-index.user-navigation:
+    module:     'pim/menu/user-navigation'
+    parent:     'pim-cronjob-index'
+    targetZone: 'user-menu'
+    config:
+      userAccount: 'pim_menu.user.user_account'
+      logout:      'pim_menu.user.logout'
+
+  pim-cronjob-index.grid-title:
+    module:     'pim/common/grid-title'
+    parent:     'pim-cronjob-index'
+    targetZone: 'title'
+    config:
+      title: 'basecom.cron-ui.cronjobs' # TODO: validate
+
+  pim-cronjob-index.breadcrumbs:
+    module:     'pim/common/breadcrumbs'
+    parent:     'pim-cronjob-index'
+    targetZone: 'breadcrumbs'
+    config:
+      tab:  'pim-menu-settings'
+      item: 'basecom.cron-ui.menu-item.cronjobs'
+
+  pim-cronjob-index.grid-filters-list:
+    module:     'oro/datafilter/filters-list'
+    parent:     'pim-cronjob-index.grid-container'
+    targetZone: 'filters'
+
+  pim-cronjob-index.grid-filters-manage:
+    module:     'oro/datafilter/filters-button'
+    parent:     'pim-cronjob-index.grid-container'
+    targetZone: 'filters'
+
+  pim-cronjob-index.mass-actions:
+    module:     'pim/grid/mass-actions'
+    parent:     'pim-cronjob-index'
+    targetZone: 'bottom-panel'
+    config:
+      label: 'Selected' # Todo: trans file
+
+  pim-cronjob-index.actions-panel:
+    module:     'oro/datagrid/actions-panel'
+    parent:     'pim-cronjob-index.mass-actions'
+    targetZone: 'actions-panel'
+
+  pim-cronjob-index.pagination:
+    module:     'oro/datagrid/pagination-input'
+    parent:     'pim-cronjob-index.grid-container'
+    targetZone: 'toolbar'
+    config:
+      gridName: 'cronjob'
+
+  pim-cronjob-index.grid:
+    module:     'pim/form/common/index/grid'
+    parent:     'pim-cronjob-index'
+    targetZone: 'content'
+    position:   1000
+    config:
+      alias: 'cronjob'
+
+  pim-cronjob-index.create-button:
+    module:        'pim/form/common/index/create-button'
+    parent:        'pim-cronjob-index'
+    targetZone:    'buttons'
+    aclResourceId: 'pim_enrich_product_create' # TODO: Hm?
+    config:
+      title:     'pim_custom_entity.button.create' # TODO: Custom tans?
+      modalForm: 'basecom.cron-ui.create-modal.cronjob'
