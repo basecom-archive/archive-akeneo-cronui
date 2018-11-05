@@ -2,6 +2,8 @@
 
 <img src="docs/logo.png" width="400">
 
+> short description what it does
+
 ## Table of contents
 1. [Installation](#installation)   
   1.1 [Requirements](#requirements)   
@@ -12,9 +14,10 @@
 3. [Examples](#examples)   
   3.1 [Run an export job every hour](#run-an-export-job-every-hour)   
   3.2 [Make an mysql backup and copy it via ssh](#make-an-mysql-backup-and-copy-it-via-ssh)
-4. [Contributing](#contributing)
-5. [Authors](#authors)
-6. [License](#license)
+4. [Screenshots](#screenshots)
+5. [Contributing](#contributing)
+6. [Authors](#authors)
+7. [License](#license)
 
 ## Installation
 
@@ -88,6 +91,10 @@ yarn run webpack
 
 > detailed code example how to make this   
 > also explanation
+
+## Screenshots
+
+> some nice screenshots
 
 ## Contributing
 
