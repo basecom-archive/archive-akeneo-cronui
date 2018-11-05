@@ -24,7 +24,7 @@
 ### Requirements
 
 This bundle requires **[Akeneo 2.3 Community Edition](http://akeneo.com)** or higher. 
-Also it required **[PHP 7.1](http://php.net)** or higher.
+Also it requires **[PHP 7.1](http://php.net)** or higher.
 
 ### Install the bundle
 
