@@ -1,0 +1,4 @@
+config:
+  paths:
+    basecomcronui/templates/title-and-logo: 'basecomcronui/templates/title-and-logo.html'
+    basecomcronui/edit-title:               'basecomcronui/js/edit-title'

@@ -23,7 +23,7 @@ extensions:
     position:   100
 
   pim-cronjob-edit-form.label:
-    module:     'custom_entity/form/common/label'
+    module:     'basecomcronui/edit-title'
     parent:     'pim-cronjob-edit-form'
     targetZone: 'title'
     position:   100

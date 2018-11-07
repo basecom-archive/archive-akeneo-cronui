@@ -22,13 +22,14 @@ extensions:
       userAccount: 'pim_menu.user.user_account'
       logout:      'pim_menu.user.logout'
 
-  pim-cronjob-index.grid-title:
-    module:     'pim/common/grid-title'
+  pim-cronjob-index.grid-logo-and-title:
+    module:     'pim/common/simple-view'
     parent:     'pim-cronjob-index'
     targetZone: 'title'
     config:
-      title:     'basecom.cron-ui.cronjobs' # TODO: validate
-      countable: false
+      template: 'basecomcronui/templates/title-and-logo'
+      templateParams:
+        title: 'basecom CronUI'
 
   pim-cronjob-index.breadcrumbs:
     module:     'pim/common/breadcrumbs'
