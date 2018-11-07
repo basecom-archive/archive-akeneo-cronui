@@ -6,4 +6,5 @@ services:
     class: '%basecom.cron-ui.command.cronjobs-run.class%'
     arguments:
     - '@basecom.cron-ui.builder.cronjob'
-    tags: { name: 'console.command' }
+    tags:
+    - { name: 'console.command' }

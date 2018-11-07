@@ -27,7 +27,8 @@ extensions:
     parent:     'pim-cronjob-index'
     targetZone: 'title'
     config:
-      title: 'basecom.cron-ui.cronjobs' # TODO: validate
+      title:     'basecom.cron-ui.cronjobs' # TODO: validate
+      countable: false
 
   pim-cronjob-index.breadcrumbs:
     module:     'pim/common/breadcrumbs'
@@ -52,7 +53,7 @@ extensions:
     parent:     'pim-cronjob-index'
     targetZone: 'bottom-panel'
     config:
-      label: 'Selected' # Todo: trans file
+      label: 'Selected'
 
   pim-cronjob-index.actions-panel:
     module:     'oro/datagrid/actions-panel'

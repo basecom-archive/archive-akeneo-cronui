@@ -14,9 +14,9 @@ datagrid:
         label: 'Command'
       expression:
         label: 'Cron Expression'
-      backgroundTask:
-        label:         'Run in background?'
-        frontend_type: 'boolean-status'
+#      backgroundTask:
+#        label:         'Run in background?'
+#        frontend_type: 'boolean-status'
     properties:
       id: ~
       edit_link:
@@ -57,20 +57,20 @@ datagrid:
       columns:
         command:
           type:      'search'
-          label:     'Command' # Translation file
+          label:     'Command'
           data_name: 'rd.command'
         code:
           type:      'string'
-          label:     'Code' # Translation file
+          label:     'Code'
           data_name: 'rd.code'
         expression:
           type:      'string'
-          label:     'Expression' # Translation file
+          label:     'Cron Expression'
           data_name: 'rd.expression'
-        backgroundTask:
-          type:      'boolean'
-          label:     'Run in background?'
-          data_name: 'rd.backgroundTask'
+#        backgroundTask:
+#          type:      'boolean'
+#          label:     'Run in background?'
+#          data_name: 'rd.backgroundTask'
     mass_actions:
       delete:
         type:         'delete'

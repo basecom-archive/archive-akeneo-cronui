@@ -5,18 +5,18 @@ Basecom\Bundle\CronUiBundle\Entity\Cronjob:
   changeTrackingPolicy: 'DEFERRED_EXPLICIT'
   fields:
     id:
-      type: integer
+      type: 'integer'
       id:   true
       generator:
-        strategy: AUTO
+        strategy: 'AUTO'
     code:
-      type:   string
+      type:   'string'
       length: 100
       unique: true
     command:
-      type: text
+      type: 'text'
     expression:
-      type:   string
+      type:   'string'
       length: 100
     backgroundTask:
-      type: boolean
+      type: 'boolean'

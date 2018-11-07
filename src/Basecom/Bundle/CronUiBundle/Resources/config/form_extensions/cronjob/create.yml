@@ -1,12 +1,12 @@
 extensions:
   basecom.cron-ui.create-modal.cronjob:
-    module: custom_entity/form/creation/modal
+    module: 'custom_entity/form/creation/modal'
     config:
       labels:
         title:    'pim_custom_entity.create_popin.title'
-        subTitle: 'basecom.cron-ui.cronjobs' # TODO: Validate
-      picture:        'illustrations/User.svg' # Custom logo / image
-      successMessage: 'pim_custom_entity.message.created' # TODO: Custom translation file
+        subTitle: 'basecom.cron-ui.cronjobs'
+      picture:        '../../basecomcronui/images/illustrations/logo.png' # Custom logo / image
+      successMessage: 'basecom.cron-ui.messages.created'
       editRoute:      'pim_customentity_rest_get'
       routerKey:      'code'
       postUrl:
@@ -21,7 +21,7 @@ extensions:
     position:   10
     config:
       identifier: 'code'
-      label:      'Code' # TODO: Translation file
+      label:      'basecom.cron-ui.fields.code'
 
   basecom.cron-ui.create-modal.cronjob.command:
     module:     'pim/form/common/creation/field'
@@ -30,7 +30,7 @@ extensions:
     position:   20
     config:
       identifier: 'command'
-      label:      'Command' # TODO: Translation file
+      label:      'basecom.cron-ui.fields.command'
 
   basecom.cron-ui.create-modal.cronjob.expression:
     module:     'pim/form/common/creation/field'
@@ -39,6 +39,4 @@ extensions:
     position:   30
     config:
       identifier: 'expression'
-      label:      'Expression' # TODO: Translation file
-
-  # TODO: backgroundTask checkbox
+      label:      'basecom.cron-ui.fields.expression'
