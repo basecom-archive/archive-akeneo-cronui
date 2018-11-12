@@ -8,4 +8,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Command to execute cronjobs based on a custom expression
 - Multiple base classes and interfaces to create new cronjobs in code
-
+- Added dategrid and form to create, manage and delete cronjobs

@@ -2,7 +2,9 @@
 
 namespace Basecom\Bundle\CronUiBundle\Entity;
 
+use Basecom\Bundle\CronUiBundle\Validator\Constraint as BasecomAssert;
 use Pim\Bundle\CustomEntityBundle\Entity\AbstractCustomEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * This entity is used for the dynamic cronjobs which are created through the user interface.
@@ -11,11 +13,24 @@ use Pim\Bundle\CustomEntityBundle\Entity\AbstractCustomEntity;
  */
 class Cronjob extends AbstractCustomEntity
 {
-    /** @var string */
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     */
+    protected $code;
+
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     */
     protected $command;
 
-    /** @var string */
-    protected $expression;
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     * @BasecomAssert\CronExpression
+     */
+    protected $expression = '* * * * *';
 
     /** @var bool */
     protected $backgroundTask = true;

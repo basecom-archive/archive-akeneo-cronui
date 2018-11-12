@@ -128,7 +128,7 @@ extensions:
       readOnly:  false
 
   pim-cronjob-edit-form.properties-expression:
-    module:     'pim/form/common/fields/text'
+    module:     'basecomcronui/fields/expression'
     parent:     'pim-cronjob-edit-form.properties-common'
     targetZone: 'content'
     position:   110
@@ -137,14 +137,3 @@ extensions:
       label:     'basecom.cron-ui.fields.expression'
       required:  true
       readOnly:  false
-
-#  pim-cronjob-edit-form.properties-background-task:
-#    module:     'pim/form/common/fields/boolean'
-#    parent:     'pim-cronjob-edit-form.properties-common'
-#    targetZone: 'content'
-#    position:   120
-#    config:
-#      fieldName: 'backgroundTask'
-#      label:     'basecom.cron-ui.fields.background-task'
-#      required:  false
-#      readOnly:  false

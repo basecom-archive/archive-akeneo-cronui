@@ -1,4 +1,6 @@
 config:
   paths:
-    basecomcronui/templates/title-and-logo: 'basecomcronui/templates/title-and-logo.html'
-    basecomcronui/edit-title:               'basecomcronui/js/edit-title'
+    basecomcronui/templates/title-and-logo:    'basecomcronui/templates/title-and-logo.html'
+    basecomcronui/edit-title:                  'basecomcronui/js/edit-title'
+    basecomcronui/fields/expression:           'basecomcronui/js/fields/expression'
+    basecomcronui/templates/fields/expression: 'basecomcronui/templates/fields/expression.html'

@@ -31,12 +31,3 @@ extensions:
     config:
       identifier: 'command'
       label:      'basecom.cron-ui.fields.command'
-
-  basecom.cron-ui.create-modal.cronjob.expression:
-    module:     'pim/form/common/creation/field'
-    parent:     'basecom.cron-ui.create-modal.cronjob'
-    targetZone: 'fields'
-    position:   30
-    config:
-      identifier: 'expression'
-      label:      'basecom.cron-ui.fields.expression'
