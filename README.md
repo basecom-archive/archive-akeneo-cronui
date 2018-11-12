@@ -6,8 +6,7 @@ The basecom CronUI is an extension for [Akeneo](https://akeneo.com) community an
 enterprise edition. It adds a new user interface which can be used to create, manage 
 and delete cronjobs. Also, it allows the developers to create cronjobs through code.
 
-<img src="docs/index.png" width="300">
-<img src="docs/edit.png" width="300">
+<img src="docs/index.png" width="300">  <img src="docs/edit.png" width="300">
 
 ## Table of contents
 1. [Installation](#installation)   
@@ -73,7 +72,10 @@ yarn run webpack
 
 ## Usage
 
-> basic description (example: ui and code difference, how to disable ui, etc.)
+There are two ways to create cronjobs. You can create them via the user interface, 
+and you may define them in code. The benefit of creating them via code is that you can 
+execute regular PHP code. The cronjobs defined in the user interface can perform any 
+shell command, including but not limited to the Symfony commands.
 
 ### Define cronjobs in code
 
