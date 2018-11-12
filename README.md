@@ -6,10 +6,7 @@ The basecom CronUI is an extension for [Akeneo](https://akeneo.com) community an
 enterprise edition. It adds a new user interface which can be used to create, manage 
 and delete cronjobs. Also, it allows the developers to create cronjobs through code.
 
-<kbd>
 <img src="docs/index.png" width="300">
-</kdb>
-
 <img src="docs/edit.png" width="300">
 
 ## Table of contents
