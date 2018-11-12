@@ -1,0 +1,8 @@
+parameters:
+  basecom.cron-ui.repository.cronjob.class: 'Basecom\Bundle\CronUiBundle\Repository\CronjobRepository'
+
+services:
+  basecom.cron-ui.repository.cronjob:
+    class: '%basecom.cron-ui.repository.cronjob.class%'
+    arguments:
+      - '@doctrine.orm.entity_manager'

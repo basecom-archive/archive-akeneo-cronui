@@ -26,5 +26,6 @@ class BasecomCronUiExtension extends Extension
         $loader->load('builders.yml');
         $loader->load('commands.yml');
         $loader->load('normalizers.yml');
+        $loader->load('repositories.yml');
     }
 }

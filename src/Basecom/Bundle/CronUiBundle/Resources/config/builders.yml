@@ -4,3 +4,6 @@ parameters:
 services:
   basecom.cron-ui.builder.cronjob:
     class: '%basecom.cron-ui.builder.cronjob.class%'
+    arguments:
+      - '@basecom.cron-ui.repository.cronjob'
+      - '%kernel.root_dir%'
