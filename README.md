@@ -1,6 +1,6 @@
 # Basecom CronUI Bundle
 
-<img src="docs/logo.png" width="400">
+<img src="docs/logo.svg" width="400">
 
 The basecom CronUI is an extension for [Akeneo](https://akeneo.com) community and 
 enterprise edition. It adds a new user interface which can be used to create, manage 
