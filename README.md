@@ -16,13 +16,9 @@ and delete cronjobs. Also, it allows the developers to create cronjobs through c
     2.1.2 [Akeneo Jobs](#akeneo-jobs-jobcronjob)   
   2.2 [Registering cronjobs](#registering-cronjobs)   
   2.3 [Define cronjobs in ui](#define-cronjobs-in-ui)
-3. [Examples](#examples)   
-  3.1 [Run an export job every hour](#run-an-export-job-every-hour)   
-  3.2 [Make an mysql backup and copy it via ssh](#make-an-mysql-backup-and-copy-it-via-ssh)
-4. [Screenshots](#screenshots)
-5. [Contributing](#contributing)
-6. [Authors](#authors)
-7. [License](#license)
+3. [Contributing](#contributing)
+4. [Authors](#authors)
+5. [License](#license)
 
 ## Installation
 
@@ -215,31 +211,35 @@ After the creation it will automatically open the edit page for this new cronjob
 
 ![Create window](docs/edit.png)
 
-## Examples
-
-> short introduction to examples
-
-### Run an export job every hour
-
-> detailed code example how to make this   
-> also explanation
-
-### Make an mysql backup and copy it via ssh
-
-> detailed code example how to make this   
-> also explanation
-
-## Screenshots
-
-> some nice screenshots
-
 ## Contributing
 
-> feel free to submit an issue or pr... security related issue e-mail... 
+If you need help or want to ask a question, [open an issue](https://github.com/basecom/akeneo-cronui/issues). If you found a bug or have a feature request please also  [open an issue](https://github.com/basecom/akeneo-cronui/issues). 
+
+We welcome everyone to create Pull Requests and discuss new ideas. 
+
+If you found a security-related issue, please send details via e-mail to [j.kniest@basecom.de](mailto:j.kniest@basecom.de)
 
 ## Authors
 
-> basecom logo (+ text) and profile picture of maintainer (me)
+<img src="https://www.basecom.de/sites/all/themes/basecom/images/basecom_logo.svg" width="200px">
+
+[basecom GmbH & Co. KG](https://basecom.de)
+
+---
+
+### Core Team
+
+<table>
+    <tr>
+        <td>
+            <img src="https://avatars0.githubusercontent.com/u/15618191?s=460&v=4" width="70px">
+        </td>
+        <td>
+        Jordan Kniest<br>
+        <a href="mailto:j.kniest@basecom.de">Mail</a> &mdash; <a href="https://twitter.com/j_kniest">Twitter</a> &mdash; <a href="https://github.com/jkniest">Github</a>
+    </td>
+  </tr>
+</table>
 
 ## License
 
