@@ -1,0 +1,10 @@
+extensions:
+  basecom.cron-ui.menu-item.cronjobs:
+    module:   'pim/menu/item'
+    parent:   'pim-menu-settings-navigation-block'
+    position: 500
+    config:
+      title: 'basecom.cron-ui.cronjobs'
+      to:    'pim_customentity_index'
+      routeParams:
+        customEntityName: 'cronjob'

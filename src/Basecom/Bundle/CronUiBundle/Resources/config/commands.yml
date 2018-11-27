@@ -1,0 +1,10 @@
+parameters:
+  basecom.cron-ui.command.cronjobs-run.class: 'Basecom\Bundle\CronUiBundle\Command\CronjobsRunCommand'
+
+services:
+  basecom.cron-ui.command.cronjobs-run:
+    class: '%basecom.cron-ui.command.cronjobs-run.class%'
+    arguments:
+    - '@basecom.cron-ui.builder.cronjob'
+    tags:
+    - { name: 'console.command' }

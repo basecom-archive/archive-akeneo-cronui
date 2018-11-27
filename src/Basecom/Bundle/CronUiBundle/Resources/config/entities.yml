@@ -1,0 +1,2 @@
+parameters:
+  basecom.cron-ui.entity.cronjob.class: 'Basecom\Bundle\CronUiBundle\Entity\Cronjob'

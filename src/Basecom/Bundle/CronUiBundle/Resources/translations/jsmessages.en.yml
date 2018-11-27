@@ -1,0 +1,32 @@
+basecom:
+  cron-ui:
+    cronjobs: 'Cronjobs'
+    fields:
+      code:            'Code'
+      command:         'Command'
+      expression:      'Cron Expression'
+      background-task: 'Run in background?'
+    messages:
+      created: 'Successfully created new cronjob'
+      delete:
+        title:   'Delete cronjob'
+        confirm: 'Are you sure you want to remove the cronjob?'
+        success: 'Cronjob successfully deleted'
+        failed:  'Cronjob deletion failed'
+      update:
+        success:   'Cronjob successfully updated'
+        failed:    'Cronjob update failed'
+        not-ready: 'Not ready to update yet'
+    expressions:
+      select-below:          'Select below:'
+      every-minute:          'Every minute'
+      every-five-minutes:    'Every five minutes'
+      every-fifteen-minutes: 'Every fifteen minutes'
+      every-half-hour:       'Every half an hour'
+      every-hour:            'Every hour'
+      every-three-hours:     'Every three hours'
+      every-six-hours:       'Every six hours'
+      every-day:             'Every day at midnight'
+      every-week:            'Every monday at midnight'
+      every-month:           'Every month on the 1st at midnight'
+      every-year:            'Every year on the 1st of january at midnight'

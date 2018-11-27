@@ -1,0 +1,20 @@
+<div style="width: 100%">
+    <% if(useDropdown) { %>
+        <select id="pim_enrich_form_<%- fieldId %>" name="<%- fieldName %>">
+            <% _.each(prefilled, function (expression, label) { %>
+                <option value="<%- expression %>" <% if(expression === value) {%>selected<%} %>>
+                    <%- __('basecom.cron-ui.expressions.' + label) %>
+                </option>
+            <% }); %>
+        </select>
+    <% } else { %>
+        <input id="pim_enrich_form_<%- fieldId %>"
+               name="<%- fieldName %>"
+               class="AknTextField"
+               value="<%- value %>"/>
+    <% } %>
+    <br>
+    <a href="#" id="cronjob-switch">
+        Switch to <% if(useDropdown) { %> manual input <% } else { %> dropdown <% } %>
+    </a>
+</div>

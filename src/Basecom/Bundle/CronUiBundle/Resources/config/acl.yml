@@ -1,0 +1,19 @@
+basecom.cron-ui.index.cronjob:
+  type:       'action'
+  label:      'Cronjob' # TODO: Custom trans file
+  group_name: 'pim_custom_entity.acl_group.reference_data'
+
+basecom.cron-ui.create.cronjob:
+  type:       'action'
+  label:      'create'
+  group_name: 'pim_custom_entity.acl_group.reference_data'
+
+basecom.cron-ui.edit.cronjob:
+  type:       'action'
+  label:      'edit'
+  group_name: 'pim_custom_entity.acl_group.reference_data'
+
+basecom.cron-ui.delete.cronjob:
+  type:       'action'
+  label:      'delete'
+  group_name: 'pim_custom_entity.acl_group.reference_data'
