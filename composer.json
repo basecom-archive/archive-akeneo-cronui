@@ -1,7 +1,7 @@
 {
   "name": "basecom/akeneo-cron-ui",
   "description": "This bundle provides an UI for managing Cronjobs in Akeneo",
-  "type": "libary",
+  "type": "symfony-bundle",
   "require": {
     "akeneo/pim-community-dev": "3.2.x-dev@dev",
     "tightenco/collect": "^5.7",
