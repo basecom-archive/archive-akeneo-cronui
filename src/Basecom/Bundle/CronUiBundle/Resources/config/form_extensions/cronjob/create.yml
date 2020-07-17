@@ -5,7 +5,7 @@ extensions:
       labels:
         title:    'pim_custom_entity.create_popin.title'
         subTitle: 'basecom.cron-ui.cronjobs'
-      picture:        '../../basecomcronui/images/illustrations/logo.png' # Custom logo / image
+      picture:        '../../basecomcronui/images/illustrations/logo_110.png' # Custom logo / image
       successMessage: 'basecom.cron-ui.messages.created'
       editRoute:      'pim_customentity_rest_get'
       routerKey:      'code'
