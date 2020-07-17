@@ -24,7 +24,7 @@ and delete cronjobs. Also, it allows the developers to create cronjobs through c
 
 ### Requirements
 
-This bundle requires **[Akeneo 2.3 Community Edition](http://akeneo.com)** or higher. 
+This bundle requires **[Akeneo 4.0.33 Community Edition](http://akeneo.com)** or higher. 
 Also it requires **[PHP 7.1](http://php.net)** or higher.
 
 ### Install the bundle
@@ -37,14 +37,11 @@ composer require basecom/akeneo-cron-ui
 2. Follow the installation steps of the [Custom entity bundle](https://github.com/akeneo-labs/CustomEntityBundle) if not
 already installed.
 
-3. Add the bundle to the `AppKernel.php`:
+3. Add the bundle to the `bundles.php`:
 ```php
-protected function registerProjectBundles()
-{
-    return [
-        new \Basecom\Bundle\CronUiBundle\BasecomCronUiBundle(),
-    ];
-}
+return [
+    \Basecom\Bundle\CronUiBundle\BasecomCronUiBundle::class => ['all' => true],
+];
 ```
 
 4. Run the doctrine schema update to create the new cronjobs table
@@ -63,7 +60,7 @@ php ./bin/console doctrine:schema:update --force --env=prod
 ```bash
 php ./bin/console cache:clear --env=prod --no-warmup
 php ./bin/console cache:warmup --env=prod
-php ./bin/console pim:installer:assets --symlink --clean --env=prod
+php ./bin/console pim:installer:assets --clean --env=prod
 yarn run webpack
 ```
 
