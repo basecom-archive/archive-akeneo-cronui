@@ -3,11 +3,11 @@
   "description": "This bundle provides an UI for managing Cronjobs in Akeneo",
   "type": "symfony-bundle",
   "require": {
-    "akeneo/pim-community-dev": "3.2.x-dev@dev",
+    "akeneo/pim-community-dev": "^4.0.33",
     "tightenco/collect": "^5.7",
     "dragonmantank/cron-expression": "^2.2",
     "cocur/background-process": "^0.7.0",
-    "akeneo-labs/custom-entity-bundle": "3.0.*"
+    "akeneo-labs/custom-entity-bundle": "dev-master"
   },
   "license": "MIT",
   "authors": [
