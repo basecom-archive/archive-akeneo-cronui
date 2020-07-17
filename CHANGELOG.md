@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Nothing yet
 
+
+## 1.1.0
+
+### Updated 
+- Update Akeneo to 4.0.33
+- Update the CustomEntityBundle to the newest version
+- Update README.md to the new changes in Akeneo 4.0
+### Bugfix
+- Fixed a bug where the logo was displayed too large 
+
 ## 1.0.0
 ### Added
 - Command to execute cronjobs based on a custom expression
